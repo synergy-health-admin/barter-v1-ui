@@ -1,0 +1,134 @@
+.chat{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .messages{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: scroll;
+
+        h1{
+            font-weight: 300;
+        }
+
+        .message{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .chatBox{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        
+
+        .top{
+            background-color: #f7c14b85;
+            padding: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+            }
+            .close{
+                font-weight: 300;
+                cursor: pointer;
+            }
+        }
+        
+        .center{
+            height: 350px;
+            overflow: scroll;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .chatMessage{
+                width: 50%;
+                background-color: rgb(190, 247, 247);
+                border-radius: 10px;
+                padding: 10px;
+
+                &.own{
+                    align-self: flex-end;
+                    text-align: right;
+                    background-color: #feeabf85;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+
+                span{
+                    font-size: 12px;
+                    background-color: #f7c14b39;
+                    padding: 2px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .bottom{
+            border-top: 2px solid #f7c14b85;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding-bottom: 5px;
+
+            textarea{
+                flex: 3;
+                height: 100%;
+                border: none;
+                padding: 20px;
+            }
+
+            button{
+                flex: 1;
+                background-color: #f7c14b85;
+                height: 100%;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
